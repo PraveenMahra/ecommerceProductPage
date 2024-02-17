@@ -157,3 +157,14 @@ iconNavClose.addEventListener("click", function () {
   navList.style.display = "none";
   overlayNav.classList.add("hidden");
 });
+
+// checkout button eventListeners
+
+document.querySelector(".checkout-btn").addEventListener("click", function (e) {
+  alert("Thank you for shopping with us.");
+  const itemList = e.target.closest(".cart-item");
+  const quantityBag = document.querySelector(".quantity");
+  itemList.classList.add("hidden");
+  quantityBag.remove();
+  emptyCartMsg.classList.remove("hidden");
+});
