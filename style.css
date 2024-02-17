@@ -153,23 +153,22 @@ header {
 }
 
 .lightbox {
-  img {
-    top: 12rem;
-    left: 50rem;
-    z-index: 2;
-    position: fixed;
-  }
+  position: absolute;
+  top: 0;
 }
 
 .lightbox-img-icon {
+  top: 15rem;
+  left: 28rem;
+  z-index: 2;
   position: relative;
 }
 
 .icon-close {
-  top: 9rem;
-  right: 45rem;
+  top: -3rem;
+  right: 0;
   z-index: 2;
-  position: fixed;
+  position: absolute;
 }
 
 .icon-close:hover path {
@@ -178,10 +177,10 @@ header {
 }
 
 .icon-previous {
-  left: 48rem;
-  top: 30rem;
+  left: -2rem;
+  top: 18rem;
   z-index: 2;
-  position: fixed;
+  position: absolute;
   background-color: var(--White);
   border-radius: 50%;
   height: 4rem;
@@ -197,10 +196,10 @@ header {
 }
 
 .icon-next {
-  right: 43.2rem;
-  top: 30rem;
+  right: -2rem;
+  top: 18rem;
   z-index: 2;
-  position: fixed;
+  position: absolute;
   background-color: var(--White);
   border-radius: 50%;
   height: 4rem;

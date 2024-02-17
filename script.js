@@ -91,10 +91,12 @@ function handleThumbnilClick(i) {
 
 productImg.addEventListener("click", function () {
   lightbox.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
 });
 
 document.querySelector(".icon-close").addEventListener("click", function () {
   lightbox.classList.add("hidden");
+  document.body.style.overflow = "scroll";
 });
 
 window.addEventListener("load", function () {
