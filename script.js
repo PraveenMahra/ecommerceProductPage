@@ -141,3 +141,19 @@ const deletIcon = document
     quantityBag.remove();
     emptyCartMsg.classList.remove("hidden");
   });
+
+// menu icon (for mobile) aventListener
+
+const navList = document.querySelector(".nav-lists");
+const overlayNav = document.querySelector(".overlay-nav-lists");
+const iconNavClose = document.querySelector(".icon-close-nav-list");
+
+document.querySelector(".icon-menu").addEventListener("click", function () {
+  navList.style.display = "block";
+  overlayNav.classList.remove("hidden");
+});
+
+iconNavClose.addEventListener("click", function () {
+  navList.style.display = "none";
+  overlayNav.classList.add("hidden");
+});

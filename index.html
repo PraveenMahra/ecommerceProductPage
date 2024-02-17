@@ -20,6 +20,7 @@
       .attribution {
         font-size: 11px;
         text-align: center;
+        margin-top: 4rem;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -30,14 +31,41 @@
     <main>
       <header>
         <div class="navbar">
-          <h1 class="logo">sneakers</h1>
-          <ul>
-            <li><a href=""> Collections</a></li>
-            <li><a href=""> Men</a></li>
-            <li><a href=""> Women</a></li>
-            <li><a href="">About</a></li>
-            <li><a href=""> Contact</a></li>
-          </ul>
+          <div class="icon-menu hidden">
+            <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z"
+                fill="#69707D"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+
+          <img class="logo" src="./images/logo.svg" alt="logo" />
+
+          <div class="nav-lists">
+            <ul>
+              <li><a href=""> Collections</a></li>
+              <li><a href=""> Men</a></li>
+              <li><a href=""> Women</a></li>
+              <li><a href="">About</a></li>
+              <li><a href=""> Contact</a></li>
+            </ul>
+
+            <svg
+              class="icon-close-nav-list"
+              width="14"
+              height="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                fill="#555"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="overlay-nav-lists hidden"></div>
         </div>
 
         <div class="cart-user">
@@ -194,18 +222,50 @@
             Featuring a durable rubber outer sole, they’ll withstand everything
             the weather can offer.
           </p>
-          <p class="price">
-            <span class="price-input"> $125.00 </span
-            ><span class="price-off">50%</span>
-          </p>
-          <strike class="older-price"> $250.00</strike>
+          <div class="prices">
+            <p class="price">
+              <span class="price-input"> $125.00 </span
+              ><span class="price-off">50%</span>
+            </p>
+            <strike class="older-price"> $250.00</strike>
+          </div>
 
           <div class="add-cart-item">
-            <img class="minus-quantity" src="./images/icon-minus.svg" alt="" />
+            <div class="quantity-details">
+              <svg
+                class="minus-quantity"
+                width="12"
+                height="4"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs>
+                  <path
+                    d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
+                    id="a"
+                  />
+                </defs>
+                <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a" />
+              </svg>
 
-            <p class="quantity-input">1</p>
+              <p class="quantity-input">1</p>
 
-            <img class="plus-quantity" src="./images/icon-plus.svg" alt="" />
+              <svg
+                class="plus-quantity"
+                width="12"
+                height="12"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs>
+                  <path
+                    d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
+                    id="b"
+                  />
+                </defs>
+                <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b" />
+              </svg>
+            </div>
 
             <button class="cart-btn btn">
               <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
