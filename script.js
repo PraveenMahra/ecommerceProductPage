@@ -122,13 +122,21 @@ cartBtn.addEventListener("click", function () {
   emptyCartMsg.classList.add("hidden");
 });
 
-cartBag.addEventListener("click", function () {
+cartBag.addEventListener("click", function (event) {
+  event.stopPropagation();
+
   cartBox.classList.toggle("hidden");
 
   if (cartItem.classList.contains("hidden")) {
     emptyCartMsg.classList.remove("hidden");
   } else {
     emptyCartMsg.classList.add("hidden");
+  }
+});
+
+window.addEventListener("click", (event) => {
+  if (!event.target.closest(".cart-box")) {
+    cartBox.classList.add("hidden");
   }
 });
 
